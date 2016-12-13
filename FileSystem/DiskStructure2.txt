@@ -1,0 +1,11 @@
+<root>
+  <folder5>
+  <folder1>
+    <folder9>
+    h.txt
+    <aaa>
+  <folder2>
+    u.txt
+       .
+70
+30

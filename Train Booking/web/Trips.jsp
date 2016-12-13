@@ -1,0 +1,199 @@
+<%@page import="data.Patient"%>
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+          <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css" />
+
+    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+   
+        <style>
+            .user-row {
+    margin-bottom: 14px;
+}
+
+.user-row:last-child {
+    margin-bottom: 0;
+}
+
+.dropdown-user {
+    margin: 13px 0;
+    padding: 5px;
+    height: 100%;
+}
+
+.dropdown-user:hover {
+    cursor: pointer;
+}
+
+.table-user-information > tbody > tr {
+    border-top: 1px solid rgb(221, 221, 221);
+}
+
+.table-user-information > tbody > tr:first-child {
+    border-top: 0;
+}
+
+
+.table-user-information > tbody > tr > td {
+    border-top: 0;
+}
+.toppad
+{margin-top:20px;
+}
+
+
+        </style>
+
+        
+    </head>
+    <body><% 
+        String name =request.getParameter("name");
+        int age=Integer.parseInt(request.getParameter("age"));
+        String gender=request.getParameter("gender");
+        String address=request.getParameter("address");
+        int mobile=Integer.parseInt(request.getParameter("mobile"));
+        int telephone=Integer.parseInt(request.getParameter("telephone"));     
+        String jop=request.getParameter("jop");
+        String marital=request.getParameter(" marital"); 
+        
+        
+    %>
+       <div class="container">
+      <div class="row">
+      <div class="col-md-5  toppad  pull-right col-md-offset-3 ">
+
+      </div>
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad" >
+   
+   
+          <div class="panel panel-info">
+            <div class="panel-heading">
+              <h3 class="panel-title">Patient Profile</h3>
+            </div>
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-md-3 col-lg-3 " align="center">  </div>
+               
+                <div class=" col-md-9 col-lg-9 "> 
+                  <table class="table table-user-information">
+                    <tbody>
+                      <tr>
+                        <td> <b>Personal Information: </b></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>patient name:</td>
+                        <td> <%= name %></td>
+                      </tr>
+                      <tr>
+                        <td>Age:</td>
+                        <td><%= age %></td>
+                      </tr>
+                   
+                         <tr>
+                             <tr>
+                        <td>Gender:</td>
+                        <td> <%= gender %></td>
+                      </tr>
+                        <tr>
+                        <td>Address:</td>
+                        <td> <%= address %></td>
+                      </tr>
+                      <tr>
+                        <td>Mobile:</td>
+                        <td> <%= mobile%></td>
+                      </tr>
+                       <tr>
+                        <td>Telephone:</td>
+                        <td> <%= telephone %></td>
+                      </tr>
+                        <td>Job:</td>
+                        <td><%= jop%> </td>
+                           
+                      </tr>
+                      <tr>
+                       </tr>
+                        <td>Marital Status:</td>
+                        <td> <%= marital %></td>
+                           
+                      </tr>
+                      <tr>
+                      </tr>
+                        <td> <b > Medical Information:</b></td>
+                        <td> </td>
+                           
+                      </tr>
+                      <tr>
+                      </tr>
+                        <td>latest surgery date:</td>
+                        <td> Yes:  <input type="checkbox" name="yes" value="yes">  No:<input type="checkbox" name="no" value="no"> </td>
+                           
+                      </tr>
+                     
+                      <tr>
+                      </tr>
+                        <td>suffer from any kidney ,lungs , heart ,blood presure disease?</td>
+                        <td> Yes:  <input type="checkbox" name="yes" value="yes"> No: <input type="checkbox" name="no" value="no"> </td>
+                           
+                      </tr>
+                      <tr>
+                       </tr>
+                        <td>had blood transfer befor?</td>
+                        <td>  Yes: <input type="checkbox" name="yes" value="yes"> No: <input type="checkbox" name="no" value="no"> </td>
+                           
+                      </tr>
+                      <tr>
+                     </tr>
+                        <td>catch virus C or B before ?</td>
+                        <td>  Yes: <input type="checkbox" name="yes" value="yes"> No: <input type="checkbox" name="no" value="no"> </td>
+                           
+                      </tr>
+                      <tr>
+                      </tr>
+                        <td>take any medicines or drugs now ?</td>
+                        <td>  Yes: <input type="checkbox" name="yes" value="yes"> No: <input type="checkbox" name="no" value="no"> </td>
+                           
+                      </tr>
+                      <tr>
+                      </tr>
+                        <td>your latest visite to the dentist ?</td>
+                        <td> Yes:  <input type="checkbox" name="yes" value="yes"> No: <input type="checkbox" name="no" value="no"> </td>
+                           
+                      </tr>
+
+                      <tr>
+                       </tr>
+                        <td>had a tooth filling before ?</td>
+                        <td>  Yes: <input type="checkbox" name="yes" value="yes"> No: <input type="checkbox" name="no" value="no"> </td>
+                           
+                      </tr>
+                     
+                     
+                     
+                    </tbody>
+                  </table>
+                  
+                  
+                  <a href="#" class="btn btn-primary" style="width:140px">Edit</a>
+                 
+                  <a href="#" class="btn btn-primary" style="width:140px"> Homepage</a>
+                </div>
+              </div>
+            </div>
+                
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    </body>
+</html>

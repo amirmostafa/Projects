@@ -1,0 +1,6 @@
+Age,Income,Response
+35,35,no
+22,50,yes
+63,200,no
+59,170,no
+25,40,yes
